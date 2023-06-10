@@ -12,7 +12,7 @@ Para compilar o trabalho basta baixar os arquivos disponibilizados neste reposit
 
 **Observação**: Até o presente momento (09/06) O único sistema operacional em que o programa foi testado foi no Windows 10 (em mais de uma máquina e obteve sucesso na compilação), então talvez aja algumas incompatibilidades com outros sistemas operacionais como Linux ou Mac. 
 
-### Enunciado
+### ENUNCIADO
 
 O enunciado deste trabalho prático, que serviu de base para todo o desenvolvimento, está disponível em https://docs.google.com/document/d/1mXVDPAVIm0R4TLARR96bGZ1vfWD449jJrPUJ2hlQEEg/edit?usp=sharing 
 

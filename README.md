@@ -1,10 +1,10 @@
 # Trabalho Prático - Programação e Desenvolvimento de Software II - 2023/1
 
 Integrantes do grupo:  
-- Carla Beatriz Ferreira,
-- Isabela Fernandes Guerra de Morais
-- Manuela Monteiro Fernandes de Oliveira
-- Vítor Terra Mattos do Patrocínio Veloso
+- Carla Beatriz Ferreira;
+- Isabela Fernandes Guerra de Morais;
+- Manuela Monteiro Fernandes de Oliveira;
+- Vítor Terra Mattos do Patrocínio Veloso.
 
 ### COMO COMPILAR E RODAR O CÓDIGO
 

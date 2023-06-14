@@ -43,9 +43,8 @@ void Buscador::CriarIndice(string caminho){
             
             ifstream f;
             f.open(entry.path(), ios::in);
-            cin.rdbuf(f.rdbuf());
 
-            while (cin >> chave)
+            while (f >> chave)
             {
                 chave = normalizar(chave);
                 arquivo = entry.path();

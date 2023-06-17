@@ -18,7 +18,7 @@ int main(int argc, char const *argv[]) {
   cout << testeBuscador.acessarIndice("a")["a.txt"] << endl;
 
   // Leitura do teclado, inclui a linha inteira; armazena essa entrada como os
-  // índices dos vetores
+  // índices do vetor linha
   cout << "testeRecupera: " << endl;
   while (cin >> s) {
     linha.push_back(s);

@@ -14,7 +14,7 @@ class Recupera
     // Construtor de Recupera, tem um vetor com as palavras lidas do terminal como parâmetro
     Recupera(vector<string> entrada);
     
-    // Supõe que o map já está definido, tenho que lidar com a excessão caso não esteja
+    // Supõe que o map de retorno já está definido, tenho que lidar com a excessão caso não esteja
     map<string, map<string, int>> acessoMapa();
 
     private:

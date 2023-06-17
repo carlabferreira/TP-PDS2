@@ -17,12 +17,13 @@ int main(int argc, char const *argv[]) {
   cout << "testeBuscador: " << endl;
   cout << testeBuscador.acessarIndice("a")["a.txt"] << endl;
 
-  // Leitura do teclado, inclui a linha inteira; armazena essa entrada como os
-  // índices dos vetores
+  // Leitura do teclado, inclui a linha inteira; armazena essa entrada 
+  //como os índices do vetor linha
   cout << "testeRecupera: " << endl;
   while (cin >> s) {
     linha.push_back(s);
   }
+  // Chamada do construtor de Recupera e um loop for para teste
   Recupera testeRecupera(linha);
   map<string, map<string, int>> mapa_t = testeRecupera.acessoMapa();
   for (auto &outer_map_pair : mapa_t) {

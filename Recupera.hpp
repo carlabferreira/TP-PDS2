@@ -17,6 +17,7 @@ class Recupera
     // Supõe que o map já está definido, tenho que lidar com a excessão caso não esteja
     map<string, map<string, int>> acessoMapa();
 
+    // Mapa com a relação entre as palavras digitadas (chave) e os arquivos/quantidade de vezes (valor)
     private:
         map<string, map<string, int>> mapa_;
 };

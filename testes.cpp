@@ -23,7 +23,9 @@ int main(int argc, char const *argv[]) {
   while (cin >> s) {
     linha.push_back(s);
   }
+  // Chamada do construtor
   Recupera testeRecupera(linha);
+  // Loop para testar se o mapa está funcionando corretamente
   map<string, map<string, int>> mapa_t = testeRecupera.acessoMapa();
   for (auto &outer_map_pair : mapa_t) {
     cout << outer_map_pair.first << " contém: " << endl;

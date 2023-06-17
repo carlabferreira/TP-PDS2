@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// Recebe a linha digitada no terminal como vetor de string, é um parâmetro do construtor
+// Construtor, o parâmetro é o vetor de string com a entrada de palavras
 Recupera::Recupera(vector<string> entrada)
 {
     Buscador pastaBuscador("./documentos");
@@ -23,6 +23,7 @@ Recupera::Recupera(vector<string> entrada)
 
 }
 
+// Método para retornar o mapa gerado, que é privado
 map<string, map<string, int>> Recupera::acessoMapa()
 {
     return this->mapa_;

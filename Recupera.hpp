@@ -17,6 +17,7 @@ class Recupera
     // Supõe que o map de retorno já está definido, tenho que lidar com a excessão caso não esteja
     map<string, map<string, int>> acessoMapa();
 
+    // Mapa que relaciona a palavra inserida(chave) no terminal com os seus arquivos/ocorrências correspondentes (valor)
     private:
         map<string, map<string, int>> mapa_;
 };

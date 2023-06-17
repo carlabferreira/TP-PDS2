@@ -7,5 +7,5 @@ obj/testes.o: testes.cpp Buscador.hpp
 obj/Buscador.o: Buscador.cpp Buscador.hpp
 	g++ -c -o $@ $< -I.
 
-obj/Recupera.o: Recupera.cpp Recupera.hpp Buscador.cpp Buscador.hpp
+obj/Recupera.o: Recupera.cpp Recupera.hpp Buscador.hpp Buscador.cpp 
 	g++ -c -o $@ $< -I.

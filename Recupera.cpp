@@ -7,11 +7,11 @@
 
 using namespace std;
 
+// Recebe a linha digitada no terminal como vetor de string, é um parâmetro do construtor
 Recupera::Recupera(vector<string> entrada)
 {
     Buscador pastaBuscador("./documentos");
 
-    // Leitura do teclado, inclui a linha inteira; armazena essa entrada como os índices dos vetores
 
     // Para cada chave string do mapa(índices do vetor), o método acessarIndice
     // é chamado e retorna o map correspondente (arquivos, quantidade de vezes)

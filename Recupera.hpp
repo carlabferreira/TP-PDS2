@@ -20,5 +20,8 @@ class Recupera
     // Mapa que relaciona a palavra inserida(chave) no terminal com os seus arquivos/ocorrências correspondentes (valor)
     private:
         map<string, map<string, int>> mapa_;
+
+         // Método para calcular a relevância de cada documento em relação à consulta.
+       void calcularRelevancia(const vector<string>& documentos, map<string, int>& relevancia);
 };
 

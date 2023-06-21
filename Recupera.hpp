@@ -20,5 +20,9 @@ class Recupera
     // Mapa com a relação entre as palavras digitadas (chave) e os arquivos/quantidade de vezes (valor)
     private:
         map<string, map<string, int>> mapa_;
+
+    // Método para calcular a relevância de cada documento em relação à consulta.
+    void calcularRelevancia(const vector<string>& documentos, map<string, int>& relevancia);
+
 };
 

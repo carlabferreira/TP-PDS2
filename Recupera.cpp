@@ -20,7 +20,6 @@ Recupera::Recupera(vector<string> entrada)
     }
 
 }
-
 map<string, map<string, int>> Recupera::acessoMapa()
 {
     return this->mapa_;

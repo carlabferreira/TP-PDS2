@@ -23,7 +23,7 @@ int main(int argc, char const *argv[]) {
   while (cin >> s) {
     linha.push_back(s);
   }
-  // Chamada do construtor de Recupera e um loop for para teste
+  // Chamada do construtor de Recupera e um loop for para teste de impressão de valores
   Recupera testeRecupera(linha);
   map<string, map<string, int>> mapa_t = testeRecupera.acessoMapa();
   for (auto &outer_map_pair : mapa_t) {

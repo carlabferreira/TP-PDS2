@@ -29,17 +29,14 @@ struct comp {
     }
 };
  
-// Function to sort the map according
-// to value in a (key-value) pairs
+// Função para ordenar o map de acordo com o número de palavras encontradas em cada um dos arquivos.
 void sort(map<string, int>& M)
 {
  
-    // Declare set of pairs and insert
-    // pairs according to the comparator
-    // function comp()
+    // Declara um set de pares e insere pares de acordo com a função comparadora comp().
     set<pair<string, int>, comp> S(M.begin(), M.end());
   
-    // Print the sorted value
+    // Printa o novo map já ordenado
     for (auto& it : S) {
         cout << it.first << ' ' << it.second << endl;
     }

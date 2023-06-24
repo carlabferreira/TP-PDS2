@@ -5,38 +5,92 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <sstream>
+
+#include <set>
+
+//#include <algorithm>
+//#include <array>
+//#include <functional>
+//#include <string_view>
 
 using namespace std;
 
+struct comp {
+    template <typename T>
+ 
+    // Comparator function
+    bool operator()(const T& l, const T& r) const
+    {
+        if (l.second != r.second) {
+            return l.second > r.second;
+        }
+        return l.first < r.first; //se ocorrencia igual, não alterar. Já estão ordenados lexicograficamente no recupera
+    }
+};
+ 
+// Function to sort the map according
+// to value in a (key-value) pairs
+void sort(map<string, int>& M)
+{
+ 
+    // Declare set of pairs and insert
+    // pairs according to the comparator
+    // function comp()
+    set<pair<string, int>, comp> S(M.begin(), M.end());
+  
+    // Print the sorted value
+    for (auto& it : S) {
+        cout << it.first << ' ' << it.second << endl;
+    }
+}
+
+
 int main(int argc, char const *argv[]) {
-  Buscador testeBuscador("./documentos/");
-  vector<string> linha;
-  string s;
+  Buscador Buscador_("./documentos/"); //cria o indice
+  vector<string> palavra;
+  string linha;
+  
+  //parte que separa a frase completa em palavras em um vector
+  //separa por espaço
+  //usa o stringstream para funcionar tanto para arquivo como para no terminal, em teoria
+  while (linha != "pare"){
+    //------------------------------------
+    //cout << "Digite as palavras a serem buscadas: " << endl;
 
-  string teste = "vitor";
-  cout << "testeBuscador: " << endl;
-  cout << testeBuscador.acessarIndice("a")["a.txt"] << endl;
-
-  // Leitura do teclado, inclui a linha inteira; armazena essa entrada 
-  //como os índices do vetor linha
-  cout << "Digite as palavras a serem buscadas (digite 'fim' para encerrar):" << endl;
-  while (cin >> s) {
-    if (s == "fim") {
-      break;
+    //parte que separa a frase completa em palavras em um vector
+    //separa por espaço
+    //usa o stringstream para funcionar tanto para arquivo como para no terminal, em teoria
+    getline(cin, linha);
+    istringstream iss(linha);
+    linha = normalizar(linha);
+    while (iss >> linha) {    
+      palavra.push_back(linha);
     }
-    linha.push_back(s);
-  }
+    
 
-  // Chamada do construtor de Recupera e um loop for para teste de impressão de valores
-  Recupera testeRecupera(linha);
-  map<string, map<string, int>> mapa_t = testeRecupera.acessoMapa();
-  for (const auto &outer_map_pair : mapa_t) {
-    cout << outer_map_pair.first << " contém:" << endl;
-    for (const auto &inner_map_pair : outer_map_pair.second) {
-      cout << inner_map_pair.first << ": " << inner_map_pair.second << " ocorrência(s)" << endl;
+    //------------------------------------
+    // Chamada do construtor de Recupera e um loop for para teste de impressão de valores
+    Recupera testeRecupera(palavra);
+    map<string, map<string, int>> mapa_t = testeRecupera.acessoMapa();
+    map<string, int> mapa_aux;
+    for (const auto &outer_map_pair : mapa_t) {
+      //cout << outer_map_pair.first << " contém: ";
+      for (const auto &inner_map_pair : outer_map_pair.second) {
+        //cout << inner_map_pair.second << " ocorrência(s)" << endl;
+        //copiando o arquivo e a ocorrencia para um mapa auxiliar simples
+        mapa_aux.insert(make_pair(outer_map_pair.first, inner_map_pair.second)); 
+      }
     }
+
+    //------------------------------------
+    // Ordenar o que tem mais ocorrencias primeiro, já ordenado lexicograficamente no recupera
+    sort(mapa_aux);
+
+    mapa_aux.clear();
+    mapa_t.clear();
+    palavra.clear();
+
   }
-
-
-  return 0;
+     return 0;
 }

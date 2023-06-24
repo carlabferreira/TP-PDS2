@@ -3,6 +3,8 @@
 #include <iostream>
 #include <map>
 
+std::string normalizar(std::string s); //inclusao para poder utilizar no main tb e estar declarada de uma vez
+
 class Buscador {
     public:
         //Construtor

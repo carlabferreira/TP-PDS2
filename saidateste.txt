@@ -1,0 +1,28 @@
+Se entrada for no terminal, aperte Ctrl+Z para parar a execução
+Se entrada for um arquivo, pegará cada linha como frase (/n) e irá até o final
+
+/d2.txt
+
+/d5.txt
+/d13.txt
+/d23.txt
+/d6.txt
+/d18.txt
+/d12.txt
+/d8.txt
+
+/d5.txt
+/d13.txt
+/d23.txt
+/d6.txt
+/d18.txt
+/d12.txt
+/d8.txt
+
+/d13.txt
+/d21.txt
+/d8.txt
+
+/d2.txt
+/d3.txt
+

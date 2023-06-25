@@ -9,17 +9,12 @@
 
 #include <set>
 
-//#include <algorithm>
-//#include <array>
-//#include <functional>
-//#include <string_view>
-
 using namespace std;
 
 struct comp {
     template <typename T>
  
-    // Comparator function
+    // Função comparadora
     bool operator()(const T& l, const T& r) const
     {
         if (l.second != r.second) {

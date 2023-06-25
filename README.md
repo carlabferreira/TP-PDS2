@@ -8,7 +8,7 @@ Integrantes do grupo:
 
 ### COMO COMPILAR E RODAR O CÓDIGO
 
-Para compilar o trabalho basta baixar os arquivos disponibilizados neste repositório e via terminal utilizr o comando: "**make**", que utilizará o arquivo Makefile para compilar e gerará um arquivo main.exe que deverá ser executado.
+Para compilar o trabalho basta baixar os arquivos disponibilizados neste repositório e via terminal utilizar o comando: "**make**", que utilizará o arquivo Makefile para compilar e gerará um arquivo main.exe que deverá ser executado.
 
 **Observação**: O programa foi testado foi no Windows 11 (utilizando WSL, em mais de uma máquina e obtendo sucesso na compilação) e em Ubuntu.
 

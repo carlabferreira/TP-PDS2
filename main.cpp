@@ -46,19 +46,19 @@ int main(int argc, char const *argv[])
   vector<string> palavra;
   string linha;
 
-  do {
-    //------------------------------------
-    // cout << "Digite as palavras a serem buscadas: " << endl;
+  cout << "Se entrada for no terminal, aperte Ctrl+Z para parar a execução" << endl;
+  cout << "Se entrada for um arquivo, pegará cada linha como frase (/n) e irá até o final" << endl << endl;
+  //------------------------------------
+  while (getline(cin, linha))
+  { // em arquivos, para no fim
 
     // parte que separa a frase completa em palavras em um vector
     // separa por espaço
     // usa o stringstream para funcionar tanto para arquivo como para no terminal, em teoria
-    getline(cin, linha);
     istringstream iss(linha);
-    linha = normalizar(linha);
     while (iss >> linha)
     {
-      palavra.push_back(linha);
+      palavra.push_back(normalizar(linha));
     }
 
     //------------------------------------
@@ -84,6 +84,10 @@ int main(int argc, char const *argv[])
     mapa_aux.clear();
     mapa_t.clear();
     palavra.clear();
-  } while (linha != "pare" || linha[0] == EOF);
+    cout << endl;
+
+    // getline(cin, linha);
+  }
+  // while (linha != "pare" || linha[0] == EOF);
   return 0;
 }

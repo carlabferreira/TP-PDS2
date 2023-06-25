@@ -46,8 +46,8 @@ int main(int argc, char const *argv[])
   vector<string> palavra;
   string linha;
 
-  cout << "Se entrada for no terminal, aperte Ctrl+Z para parar a execução" << endl;
-  cout << "Se entrada for um arquivo, pegará cada linha como frase (/n) e irá até o final" << endl << endl;
+  cout << "Se entrada for no terminal, aperte enter para enviar a frase e Ctrl+Z para parar a execução" << endl;
+  cout << "Se entrada for um arquivo, pegará cada linha como frase e irá até o final" << endl << endl;
   //------------------------------------
   while (getline(cin, linha))
   { // em arquivos, para no fim
@@ -62,9 +62,9 @@ int main(int argc, char const *argv[])
     }
 
     //------------------------------------
-    // Chamada do construtor de Recupera e um loop for para teste de impressão de valores
-    Recupera testeRecupera(palavra);
-    map<string, map<string, int>> mapa_t = testeRecupera.acessoMapa();
+    // Chamada do construtor de Recupera e um loop for para teste de impressão de valores e construção do mapa simples
+    Recupera Recupera_(palavra);
+    map<string, map<string, int>> mapa_t = Recupera_.acessoMapa();
     map<string, int> mapa_aux;
     for (const auto &outer_map_pair : mapa_t)
     {

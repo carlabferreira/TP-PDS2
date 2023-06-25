@@ -46,8 +46,7 @@ int main(int argc, char const *argv[])
   vector<string> palavra;
   string linha;
 
-  while (linha != "pare")
-  {
+  do {
     //------------------------------------
     // cout << "Digite as palavras a serem buscadas: " << endl;
 
@@ -85,6 +84,6 @@ int main(int argc, char const *argv[])
     mapa_aux.clear();
     mapa_t.clear();
     palavra.clear();
-  }
+  } while (linha != "pare" || linha[0] == EOF);
   return 0;
 }
